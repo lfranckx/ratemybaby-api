@@ -1,0 +1,15 @@
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}

@@ -10,8 +10,9 @@ const jsonParser = express.json()
 const serializeUser = user => ({
     id: user.id,
     username: xss(user.username),
-    password: xss(user.password),
+    user_password: xss(user.user_password),
     email: xss(user.email),
+    date_created: user.date_created,
     user_baby: {
         name: xss(user.user_baby.name),
         about: xss(user.user_baby.about),
@@ -22,7 +23,7 @@ const serializeUser = user => ({
 })
 
 usersRouter
-    .route('/')
+    .route('/users')
     .get((req, res, next) => {
         const knexInstance = req.app.get('db')
         UsersService.getAllUsers(knexInstance)
