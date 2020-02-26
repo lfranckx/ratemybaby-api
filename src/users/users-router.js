@@ -14,11 +14,13 @@ const serializeUser = user => ({
     email: xss(user.email),
     date_created: user.date_created,
     user_baby: {
-        name: xss(user.user_baby.name),
+        id: user.user_baby.id,
+        baby_name: xss(user.user_baby.baby_name),
         about: xss(user.user_baby.about),
         image_url: xss(user.user_baby.image_url),
         total_score: user.user_baby.total_score,
-        total_votes: user.user_baby.total_votes
+        total_votes: user.user_baby.total_votes,
+        userId: user.user_baby.userId
     }
 })
 

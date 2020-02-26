@@ -13,3 +13,11 @@
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
 {"message":"Unauthorized request to path: /api/users","level":"error"}
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'name' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'name' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'name' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
