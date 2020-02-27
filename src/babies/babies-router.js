@@ -53,7 +53,7 @@ babiesRouter
     .all((req, res, next) => {
         BabiesService.getBabyById(
             req.app.get('db'),
-            req.params.id
+            req.params.baby_id
         )
         .then(baby => {
             if (!baby) {
@@ -72,7 +72,7 @@ babiesRouter
     .delete((req, res, next) => {
         BabiesService.deleteBaby(
             req.app.get('db'),
-            req.params.id
+            req.params.baby_id
         )
         .then(numRowsAfftected => {
             res.status(204).end()
@@ -91,7 +91,7 @@ babiesRouter
             })
         BabiesService.updateBaby(
             req.app.get('db'),
-            req.params.id,
+            req.params.baby_id,
             babyToUpdate
         )
             .then(numRowsAfftected => {

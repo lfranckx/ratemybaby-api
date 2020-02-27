@@ -55,7 +55,7 @@ usersRouter
     })
 
 usersRouter
-    .route('/:user_id')
+    .route('/users/:user_id')
     .all((req, res, next) => {
         UsersService.getUserById(
             req.app.get('db'),
