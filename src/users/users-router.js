@@ -12,16 +12,7 @@ const serializeUser = user => ({
     username: xss(user.username),
     user_password: xss(user.user_password),
     email: xss(user.email),
-    date_created: user.date_created,
-    user_baby: {
-        id: user.user_baby.id,
-        baby_name: xss(user.user_baby.baby_name),
-        about: xss(user.user_baby.about),
-        image_url: xss(user.user_baby.image_url),
-        total_score: user.user_baby.total_score,
-        total_votes: user.user_baby.total_votes,
-        userId: user.user_baby.userId
-    }
+    date_created: user.date_created
 })
 
 usersRouter
@@ -35,15 +26,16 @@ usersRouter
         .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
-        const { username, password, email, user_baby } = req.body
-        const newUser = { username, password, email, user_baby }
+        const { username, user_password, email } = req.body
+        const newUser = { username, user_password, email }
+        // validate values are in req.body
         for (const [key, value] of Object.entries(newUser))
         if (value == null)
             return res.status(400).json({
                 error: { message: `Missing '${key}' in request body`}
             })
 
-        const pwError = validatePassword(password)
+        const pwError = validatePassword(user_password)
         if (pwError) return res.status(400).send(pwError)
         // const unError = validateUsername(username)
         // if (unError) return res.status(409).send(unError)
@@ -94,13 +86,13 @@ usersRouter
         .catch(next)
     })
     .patch(jsonParser, (req, res, next) => {
-        const { username, password, email, user_baby } = req.body
-        const userToUpdate = { username, password, email, user_baby }
+        const { username, user_password, email } = req.body
+        const userToUpdate = { username, user_password, email }
         const numOfValues = Object.values(userToUpdate).filter(Boolean).length
         if (numOfValues === 0)
             return res.status(400).json({
                 error: {
-                    message: `Request body must contain username, password, email, or user_baby`
+                    message: `Request body must contain username, user_password, or email`
                 }
             })
         UsersService.updateUser(
@@ -113,4 +105,5 @@ usersRouter
             })
             .catch(next)
     })
+    
 module.exports = usersRouter;
