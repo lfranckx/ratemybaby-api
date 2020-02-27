@@ -43,3 +43,36 @@
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
 {"message":"Unauthorized request to path: /api/babies","level":"error"}
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api//1","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"user_babies\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api//1","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"user_babies\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api//1","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"user_babies\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/1","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/1","level":"error"}
+{"message":"Unauthorized request to path: /api/babies//1","level":"error"}
+{"message":"Unauthorized request to path: /api//1","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"user_babies\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /babies/1","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies/","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/baby_id/","level":"error"}
+{"message":"Unauthorized request to path: /api/baby_id/","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"user_babies\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/baby_id/","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"user_babies\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/1","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/1","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}

@@ -22,8 +22,9 @@ app.get('/', (req, res) => {
     res.send('Hello, boilerplate!')
 })
 
-app.use('/api', usersRouter)
+
 app.use('/api', babiesRouter)
+app.use('/api', usersRouter)
 
 app.use(errorHandler)
 
