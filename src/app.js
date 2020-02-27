@@ -8,6 +8,7 @@ const app = express()
 const validateBearerToken =  require('./validateBearerToken')
 const errorHandler = require('./errorHandler')
 const usersRouter = require('./users/users-router')
+const babiesRouter = require('./babies/babies-router')
 const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
   : 'common';
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', usersRouter)
+app.use('/api', babiesRouter)
 
 app.use(errorHandler)
 
