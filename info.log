@@ -81,3 +81,8 @@
 {"level":"error","message":""}
 {"message":"Unauthorized request to path: /","level":"error"}
 {"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"total_score\", \"total_votes\") values ($1, $2, $3, $4, $5) returning * - null value in column \"userid\" violates not-null constraint","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"user_babies\" where \"id\" = ? limit ?","level":"error"}

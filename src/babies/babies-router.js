@@ -49,7 +49,7 @@ babiesRouter
 })
 
 babiesRouter
-    .route('/:baby_id')
+    .route('/babies/:baby_id')
     .all((req, res, next) => {
         BabiesService.getBabyById(
             req.app.get('db'),
