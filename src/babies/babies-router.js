@@ -13,7 +13,7 @@ const serializeBaby = baby => ({
     image_url: xss(baby.image_url),
     total_score: xss(baby.total_score),
     total_votes: xss(baby.total_votes),
-    userId: baby.userId
+    user_id: baby.user_id
 })
 
 babiesRouter
@@ -27,8 +27,8 @@ babiesRouter
         .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
-        const { baby_name, about, image_url, total_score, total_votes, userId } = req.body
-        const newBaby = { baby_name, about, image_url, total_score, total_votes, userId }
+        const { baby_name, about, image_url, total_score, total_votes, user_id } = req.body
+        const newBaby = { baby_name, about, image_url, total_score, total_votes, user_id }
         for (const [key, value] of Object.entries(newBaby))
         if (value == null)
             return res.status(400).json({
@@ -80,8 +80,8 @@ babiesRouter
         .catch(next)
     })
     .patch(jsonParser, (req, res, next) => {
-        const { baby_name, about, image_url, total_score, total_votes } = req.body
-        const babyToUpdate = { baby_name, about, image_url, total_score, total_votes }
+        const { baby_name, about, image_url, total_score, total_votes, user_id } = req.body
+        const babyToUpdate = { baby_name, about, image_url, total_score, total_votes, user_id }
         const numOfValues = Object.values(babyToUpdate).filter(Boolean).length
         if (numOfValues === 0)
             return res.status(400).json({

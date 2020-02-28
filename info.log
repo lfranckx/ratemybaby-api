@@ -238,3 +238,19 @@
 {"message":"Unauthorized request to path: /api/users","level":"error"}
 {"message":"Unauthorized request to path: /api/babies","level":"error"}
 {"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"total_score\", \"total_votes\", \"userId\") values ($1, $2, $3, $4, $5, $6) returning * - column \"userId\" of relation \"user_babies\" does not exist","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/11","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}

@@ -1,4 +1,4 @@
-INSERT INTO user_babies (baby_name, about, image_url, total_score, total_votes, userId)
+INSERT INTO user_babies (baby_name, about, image_url, total_score, total_votes, user_id)
 VALUES
     (
         'Noah', 
