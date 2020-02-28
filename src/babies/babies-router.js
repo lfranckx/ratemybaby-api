@@ -27,8 +27,8 @@ babiesRouter
         .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
-        const { baby_name, about, image_url, total_score, total_votes } = req.body
-        const newBaby = { baby_name, about, image_url, total_score, total_votes }
+        const { baby_name, about, image_url, total_score, total_votes, userId } = req.body
+        const newBaby = { baby_name, about, image_url, total_score, total_votes, userId }
         for (const [key, value] of Object.entries(newBaby))
         if (value == null)
             return res.status(400).json({

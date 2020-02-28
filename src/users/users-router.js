@@ -13,7 +13,8 @@ const serializeUser = user => ({
     id: user.id,
     username: xss(user.username),
     user_password: xss(user.user_password),
-    email: xss(user.email)
+    email: xss(user.email),
+    userId: user.userId
 })
 
 usersRouter
@@ -36,30 +37,6 @@ usersRouter
                     error: { message: `Missing '${key}' in request body`}
                 })
 
-        
-        // validate email is not already taken
-        // if (validUser(newUser)) {
-        //     UsersService
-        //         .getUserByEmail(newUser.email)
-        //         .then(user => {
-        //             console.log(user);
-        //             if (!user) {
-        //                 UsersService.addNewUser(
-        //                     req.app.get('db'),
-        //                     newUser
-        //                 )
-        //                 .then(user => {
-        //                     res
-        //                     .status(201)
-        //                     .location(path.posix.join(req.originalUrl, `/${user.id}`))
-        //                     .json(serializeUser(user))
-        //                 })
-        //                 .catch(next)
-        //             } else {
-        //                 next(new Error('Email or username already in use'))
-        //             }
-        //         })
-        // }
         UsersService.addNewUser(
             req.app.get('db'),
             newUser

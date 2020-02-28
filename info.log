@@ -220,3 +220,21 @@
 {"message":"Unauthorized request to path: /api/users","level":"error"}
 {"message":"Unauthorized request to path: /api/users/16","level":"error"}
 {"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"total_score\", \"total_votes\") values ($1, $2, $3, $4, $5) returning * - null value in column \"userid\" violates not-null constraint","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"total_score\", \"total_votes\", \"userId\") values ($1, $2, $3, $4, $5, $6) returning * - column \"userId\" of relation \"user_babies\" does not exist","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"total_score\", \"total_votes\", \"userId\") values ($1, $2, $3, $4, $5, $6) returning * - column \"userId\" of relation \"user_babies\" does not exist","level":"error"}
