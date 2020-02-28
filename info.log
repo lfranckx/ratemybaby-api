@@ -97,3 +97,126 @@
 {"message":"Unauthorized request to path: /api/users/1","level":"error"}
 {"message":"Unauthorized request to path: /api/users/1","level":"error"}
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users/1","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/1","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/3","level":"error"}
+{"message":"Unauthorized request to path: /api/users/3","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users/3","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [id] query: select * from \"users\" where \"id\" = ? limit ?","level":"error"}
+{"message":"Unauthorized request to path: /api/users/3","level":"error"}
+{"message":"Unauthorized request to path: /api/users/1","level":"error"}
+{"message":"Unauthorized request to path: /api/users/2","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unexpected token } in JSON at position 90","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unexpected token } in JSON at position 91","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/auth","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /api/auth","level":"error"}
+{"message":"Unauthorized request to path: /api/auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /auth/signup","level":"error"}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /auth","level":"error"}
+{"message":"Unauthorized request to path: /users","level":"error"}
+{"message":"Unauthorized request to path: /users","level":"error"}
+{"message":"Unauthorized request to path: /users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'value' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'value' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'value' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"validUser is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"validUser is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'trim' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'trim' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Cannot read property 'trim' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"knex.from is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"knex.from is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"knex.from is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"knex.from is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"knex.from is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"knex.from is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users/15","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/users/15","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users/13","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users/11","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users/16","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}

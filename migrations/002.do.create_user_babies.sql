@@ -5,5 +5,5 @@ CREATE TABLE user_babies (
     image_url TEXT UNIQUE,
     total_score NUMERIC,
     total_votes NUMERIC,
-    userId INTEGER REFERENCES users(id) ON DELETE CASCADE
+    userId INTEGER REFERENCES users(id) ON DELETE CASCADE NOT NULL
 )

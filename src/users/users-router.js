@@ -2,8 +2,10 @@ const path = require('path')
 const express = require('express')
 const xss = require('xss')
 const UsersService = require('./users-service')
-const { validatePassword } = require('./validatePassword')
+const bcrypt = require('bcrypt')
+// const { validatePassword } = require('./validatePassword')
 // const { validateUsername } = require('./validateUsername')
+const { validUser } = require('./valid-user')
 const usersRouter = express.Router()
 const jsonParser = express.json()
 
@@ -11,8 +13,7 @@ const serializeUser = user => ({
     id: user.id,
     username: xss(user.username),
     user_password: xss(user.user_password),
-    email: xss(user.email),
-    date_created: user.date_created
+    email: xss(user.email)
 })
 
 usersRouter
@@ -30,17 +31,35 @@ usersRouter
         const newUser = { username, user_password, email }
         // validate values are in req.body
         for (const [key, value] of Object.entries(newUser))
-        if (value == null)
-            return res.status(400).json({
-                error: { message: `Missing '${key}' in request body`}
-            })
+            if (value == null) 
+                return res.status(400).json({
+                    error: { message: `Missing '${key}' in request body`}
+                })
 
-        const pwError = validatePassword(user_password)
-        if (pwError) return res.status(400).send(pwError)
-        // const unError = validateUsername(username)
-        // if (unError) return res.status(409).send(unError)
         
-
+        // validate email is not already taken
+        // if (validUser(newUser)) {
+        //     UsersService
+        //         .getUserByEmail(newUser.email)
+        //         .then(user => {
+        //             console.log(user);
+        //             if (!user) {
+        //                 UsersService.addNewUser(
+        //                     req.app.get('db'),
+        //                     newUser
+        //                 )
+        //                 .then(user => {
+        //                     res
+        //                     .status(201)
+        //                     .location(path.posix.join(req.originalUrl, `/${user.id}`))
+        //                     .json(serializeUser(user))
+        //                 })
+        //                 .catch(next)
+        //             } else {
+        //                 next(new Error('Email or username already in use'))
+        //             }
+        //         })
+        // }
         UsersService.addNewUser(
             req.app.get('db'),
             newUser
@@ -59,7 +78,7 @@ usersRouter
     .all((req, res, next) => {
         UsersService.getUserById(
             req.app.get('db'),
-            req.params.id
+            req.params.user_id
         )
         .then(user => {
             if (!user) {
@@ -78,7 +97,7 @@ usersRouter
     .delete((req, res, next) => {
         UsersService.deleteUser(
             req.app.get('db'),
-            req.params.id
+            req.params.user_id
         )
         .then(numRowsAfftected => {
             res.status(204).end()
@@ -97,7 +116,7 @@ usersRouter
             })
         UsersService.updateUser(
             req.app.get('db'),
-            req.params.id,
+            req.params.user_id,
             userToUpdate
         )
             .then(numRowsAfftected => {
