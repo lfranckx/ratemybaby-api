@@ -76,7 +76,7 @@ usersRouter
             req.app.get('db'),
             req.params.user_id
         )
-        .then(numRowsAfftected => {
+        .then(numRowsAffected => {
             res.status(204).end()
         })
         .catch(next)
@@ -96,10 +96,63 @@ usersRouter
             req.params.user_id,
             userToUpdate
         )
-            .then(numRowsAfftected => {
+            .then(numRowsAffected => {
                 res.status(204).end()
             })
             .catch(next)
     })
+
+usersRouter
+    .route('/login/:username')
+    .all((req, res, next) => {
+        UsersService.getUserByUsername(
+            req.app.get('db'),
+            req.params.username
+        )
+        .then(user => {
+            if (!user) {
+                return res.status(404).json({
+                    error: { message: `User doesn't exist` }
+                })
+            }
+            res.user = user
+            next()
+        })
+        .catch(next)
+    })
+    .get((req, res, next) => {
+        res.json(serializeUser(res.user))
+    })
+    .delete((req, res, next) => {
+        UsersService.deleteUser(
+            req.app.get('db'),
+            req.params.username
+        )
+        .then(numRowsAffected => {
+            res.status(204).end()
+        })
+        .catch(next)
+    })
+    .patch(jsonParser, (req, res, next) => {
+        const { username, user_password, email } = req.body
+        const userToUpdate = { username, user_password, email }
+        const numOfValues = Object.values(userToUpdate).filter(Boolean).length
+        if (numOfValues === 0)
+            return res.status(400).json({
+                error: {
+                    message: `Request body must contain username, user_password, or email`
+                }
+            })
+        UsersService.updateUser(
+            req.app.get('db'),
+            req.params.username,
+            userToUpdate
+        )
+            .then(numRowsAffected => {
+                res.status(204).end()
+            })
+            .catch(next)
+    }) 
+    
     
 module.exports = usersRouter;

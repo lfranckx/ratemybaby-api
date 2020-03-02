@@ -254,3 +254,55 @@
 {"message":"Unauthorized request to path: /api/babies","level":"error"}
 {"message":"Unauthorized request to path: /api/babies/11","level":"error"}
 {"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /users","level":"error"}
+{"message":"Unauthorized request to path: /users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_email_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users/1","level":"error"}
+{"message":"Unauthorized request to path: /api/users/","level":"error"}
+{"message":"Unauthorized request to path: /api/users/","level":"error"}
+{"message":"Unauthorized request to path: /api/users/user1","level":"error"}
+{"message":"select * from \"users\" where \"id\" = $1 limit $2 - invalid input syntax for type integer: \"user1\"","level":"error"}
+{"message":"Unauthorized request to path: /api/login/user1","level":"error"}
+{"message":"Unauthorized request to path: /api/login/user1","level":"error"}

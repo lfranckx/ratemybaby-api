@@ -74,7 +74,7 @@ babiesRouter
             req.app.get('db'),
             req.params.baby_id
         )
-        .then(numRowsAfftected => {
+        .then(numRowsAffected => {
             res.status(204).end()
         })
         .catch(next)
@@ -94,7 +94,7 @@ babiesRouter
             req.params.baby_id,
             babyToUpdate
         )
-            .then(numRowsAfftected => {
+            .then(numRowsAffected => {
                 res.status(204).end()
             })
             .catch(next)
