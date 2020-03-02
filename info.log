@@ -306,3 +306,8 @@
 {"message":"select * from \"users\" where \"id\" = $1 limit $2 - invalid input syntax for type integer: \"user1\"","level":"error"}
 {"message":"Unauthorized request to path: /api/login/user1","level":"error"}
 {"message":"Unauthorized request to path: /api/login/user1","level":"error"}
+{"message":"Unauthorized request to path: /api/login/user1","level":"error"}
+{"message":"Unauthorized request to path: /api/login/user1","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/login/user1","level":"error"}

@@ -3,5 +3,5 @@ CREATE TABLE users (
     username TEXT NOT NULL UNIQUE,
     user_password TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
-    date_created TIMESTAMP DEFAULT now() NOT NULL
+    baby_id INTEGER REFERENCES user_babies(id) ON DELETE CASCADE
 );

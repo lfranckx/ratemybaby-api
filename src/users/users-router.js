@@ -14,7 +14,7 @@ const serializeUser = user => ({
     username: xss(user.username),
     user_password: xss(user.user_password),
     email: xss(user.email),
-    userId: user.userId
+    baby_id: user.baby_id
 })
 
 usersRouter
