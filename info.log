@@ -311,3 +311,122 @@
 {"message":"Unauthorized request to path: /api/users","level":"error"}
 {"message":"Unauthorized request to path: /api/users","level":"error"}
 {"message":"Unauthorized request to path: /api/login/user1","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api//babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/2","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /babies/1","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /babies/2","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api//users","level":"error"}
+{"message":"Unauthorized request to path: /api//babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies/undefined","level":"error"}
+{"level":"error","message":""}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"insert into \"users\" (\"email\", \"user_password\", \"username\") values ($1, $2, $3) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/users","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
+{"message":"Unauthorized request to path: /api/babies","level":"error"}
