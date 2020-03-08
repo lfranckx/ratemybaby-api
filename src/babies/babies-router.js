@@ -17,7 +17,7 @@ const serializeBaby = baby => ({
 })
 
 babiesRouter
-    .route('/babies')
+    .route('/')
     .get((req, res, next) => {
         const knexInstance = req.app.get('db')
         BabiesService.getAllBabies(knexInstance)
@@ -49,7 +49,7 @@ babiesRouter
 })
 
 babiesRouter
-    .route('/babies/:baby_id')
+    .route('/:baby_id')
     .all((req, res, next) => {
         BabiesService.getBabyById(
             req.app.get('db'),

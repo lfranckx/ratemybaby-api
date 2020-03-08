@@ -12,6 +12,7 @@ const morganOption = (NODE_ENV === 'production')
 const validateBearerToken =  require('./validateBearerToken')
 const errorHandler = require('./errorHandler')
 
+const authRouter = require('./auth/auth-router')
 const usersRouter = require('./users/users-router')
 const babiesRouter = require('./babies/babies-router')
 
@@ -25,8 +26,9 @@ app.use(helmet())
 app.use(cors())
 app.use(validateBearerToken)
 
-app.use('/api', babiesRouter)
-app.use('/api', usersRouter)
+app.use('/api/babies', babiesRouter)
+app.use('/api/auth', authRouter)
+app.use('/api/users', usersRouter)
 
 app.use(errorHandler)
 
