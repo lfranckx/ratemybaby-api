@@ -5,14 +5,13 @@ const jwt = require('jsonwebtoken')
 
 describe('Auth Endpoints', function() {
   let db
-
   const { testUsers } = helpers.makeBabiesFixtures()
   const testUser = testUsers[0]
 
   before('make knex instance', () => {
     db = knex({
       client: 'pg',
-      connection: process.env.TEST_DB_URL,
+      connection: process.env.TEST_DATABASE_URL,
     })
     app.set('db', db)
   })

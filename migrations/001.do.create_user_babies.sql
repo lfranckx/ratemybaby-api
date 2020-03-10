@@ -5,5 +5,6 @@ CREATE TABLE user_babies (
     image_url TEXT,
     total_score NUMERIC,
     total_votes NUMERIC,
-    date_created TIMESTAMP DEFAULT now() NOT NULL
+    date_created TIMESTAMP DEFAULT now() NOT NULL,
+    date_modified TIMESTAMP
 );

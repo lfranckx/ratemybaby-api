@@ -26,7 +26,7 @@ babiesRouter
 async function checkBabyExists(req, res, next) {
     try {
         const baby = await BabiesService.getById(
-            req.app.get('db')
+            req.app.get('db'),
             req.params.baby_id
         )
 
