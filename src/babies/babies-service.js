@@ -13,7 +13,7 @@ const userFields = [
 const BabiesService = {
     getAllBabies(db) {
         return db
-            .from('babies AS baby')
+            .from('user_babies AS baby')
             .select(
                 'baby.id',
                 'baby.baby_name',
@@ -57,37 +57,11 @@ const BabiesService = {
             user: babyData.user || {}
         }
     },
+    updateBaby(db, id, newBabyFields) {
+        return BabiesService.getAllBabies(db)
+            .where('baby.id', id)
+            .update(newBabyFields)
+    }
 }
 
 module.exports = BabiesService 
-
-// const BabiesService = {
-//     getAllBabies(knex) {
-//         return knex.select('*').from('user_babies')
-//     },
-//     addNewBaby(knex, newBaby) {
-//         return knex
-//             .insert(newBaby)
-//             .into('user_babies')
-//             .returning('*')
-//             .then(rows => {
-//                 return rows[0]
-//             })
-//     },
-//     getBabyById(knex, id) {
-//         return knex
-//             .from('user_babies')
-//             .select('*')
-//             .where('id', id).first()
-//     },
-//     deleteBaby(knex, id) {
-//         return knex('user_babies')
-//             .where({ id })
-//             .delete()
-//     },
-//     updateBaby(knex, id, newBabyFields) {
-//         return knex('user_babies')
-//             .where({ id })
-//             .update(newBabyFields)
-//     }
-// }
