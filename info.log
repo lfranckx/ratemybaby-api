@@ -438,3 +438,21 @@
 {"message":"select \"baby\".\"id\", \"baby\".\"baby_name\", \"baby\".\"about\", \"baby\".\"image_url\", \"baby\".\"total_score\", \"baby\".\"total_votes\", \"baby\".\"date_created\", \"user\".\"id\" as \"user:id\", \"user\".\"username\" as \"user:username\", \"user\".\"user_password\" as \"user:user_password\", \"user\".\"email\" as \"user:user_email\", \"user\".\"date_created\" as \"user:date_created\", \"user\".\"date_modified\" as \"user:date_modified\" from \"babies\" as \"baby\" left join \"users\" as \"user\" on \"baby\".\"user_id\" = \"user\".\"id\" group by \"baby\".\"id\", \"user\".\"id\" - relation \"babies\" does not exist","level":"error"}
 {"message":"select \"baby\".\"id\", \"baby\".\"baby_name\", \"baby\".\"about\", \"baby\".\"image_url\", \"baby\".\"total_score\", \"baby\".\"total_votes\", \"baby\".\"date_created\", \"user\".\"id\" as \"user:id\", \"user\".\"username\" as \"user:username\", \"user\".\"user_password\" as \"user:user_password\", \"user\".\"email\" as \"user:user_email\", \"user\".\"date_created\" as \"user:date_created\", \"user\".\"date_modified\" as \"user:date_modified\" from \"babies\" as \"baby\" left join \"users\" as \"user\" on \"baby\".\"user_id\" = \"user\".\"id\" group by \"baby\".\"id\", \"user\".\"id\" - relation \"babies\" does not exist","level":"error"}
 {"message":"select \"baby\".\"id\", \"baby\".\"baby_name\", \"baby\".\"about\", \"baby\".\"image_url\", \"baby\".\"total_score\", \"baby\".\"total_votes\", \"baby\".\"date_created\", \"user\".\"id\" as \"user:id\", \"user\".\"username\" as \"user:username\", \"user\".\"user_password\" as \"user:user_password\", \"user\".\"email\" as \"user:user_email\", \"user\".\"date_created\" as \"user:date_created\", \"user\".\"date_modified\" as \"user:date_modified\" from \"babies\" as \"baby\" left join \"users\" as \"user\" on \"baby\".\"user_id\" = \"user\".\"id\" group by \"baby\".\"id\", \"user\".\"id\" - relation \"babies\" does not exist","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"password is not defined","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"AuthService.getUserWithUserName is not a function","level":"error"}
+{"message":"Illegal arguments: undefined, undefined","level":"error"}
+{"message":"Illegal arguments: string, undefined","level":"error"}
+{"message":"Illegal arguments: string, undefined","level":"error"}
+{"message":"Illegal arguments: string, undefined","level":"error"}
+{"message":"Illegal arguments: string, undefined","level":"error"}
+{"message":"Illegal arguments: string, undefined","level":"error"}
+{"message":"authToken is not defined","level":"error"}
+{"message":"authToken is not defined","level":"error"}

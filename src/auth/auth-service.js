@@ -14,7 +14,8 @@ const AuthService = {
     createJwt(subject, payload) {
         return jwt.sign(payload, config.JWT_SECRET, {
             subject,
-            expiresIn: config.JWT_EXPIRY
+            expiresIn: config.JWT_EXPIRY,
+            algorithm: 'HS256',
         })
     },
     verifyJwt(token) {
@@ -26,7 +27,7 @@ const AuthService = {
         return Buffer  
             .from(token, 'base64')
             .toString()
-            .split()
+            .split(':')
     }
 }
 
