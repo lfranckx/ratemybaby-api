@@ -7,7 +7,8 @@ const userFields = [
     'user.user_password AS user:user_password',
     'user.email AS user:user_email',
     'user.date_created AS user:date_created',
-    'user.date_modified AS user:date_modified'
+    'user.date_modified AS user:date_modified',
+    'user.baby_id AS user:baby_id'
 ]
 
 const BabiesService = {
@@ -26,7 +27,7 @@ const BabiesService = {
             )
             .leftJoin(
                 'users AS user',
-                'baby.user_id',
+                'user.baby_id',
                 'user.id'
             )
             .groupBy('baby.id', 'user.id')
@@ -54,7 +55,7 @@ const BabiesService = {
             image_url: xss(babyData.image_url),
             total_score: Number(babyData.total_score),
             total_votes: Number(babyData.total_votes),
-            user: babyData.user || {}
+            // user: babyData.user || {}
         }
     },
     updateBaby(db, id, newBabyFields) {

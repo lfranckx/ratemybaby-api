@@ -35,12 +35,20 @@ const UsersService = {
         return bcrypt.hash(password, 12)
     },
     serializeUser(user) {
+        const userTree = new Treeize()
+
+        // Some light hackiness to allow for the fact that `treeize`
+        // only accepts arrays of objects, and we want to use a single
+        // object.
+        const userData = userTree.grow([user]).getData()[0]
+
         return {
-            id: user.id,
-            username: xss(user.username),
-            user_password: xss(user.user_password),
-            email: xss(user.email),
-            date_created: new Date(user.date_created),
+            id: userData.id,
+            username: xss(userData.username),
+            user_password: xss(userData.user_password),
+            email: xss(userData.email),
+            date_created: new Date(userData.date_created),
+            user: userData.baby || {}
         }
     },
 }
