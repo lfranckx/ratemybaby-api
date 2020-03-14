@@ -71,6 +71,7 @@ const UsersService = {
             user_password: xss(userData.user_password),
             email: xss(userData.email),
             date_created: new Date(userData.date_created),
+            baby_id: userData.baby_id,
             user: userData.baby || {}
         }
     },
