@@ -81,15 +81,17 @@ VALUES
 
 INSERT INTO users (username, user_password, email, baby_id)
 VALUES
-    ('user1', 'User1234!', 'user1@gmail.com', 1),
-    ('user2', 'User1234!', 'user2@gmail.com', 2),
-    ('user3', 'User1234!', 'user3@gmail.com', 3),
-    ('user4', 'User1234!', 'user4@gmail.com', 4),
-    ('user5', 'User1234!', 'user5@gmail.com', 5),
-    ('user6', 'User1234!', 'user6@gmail.com', 6),
-    ('user7', 'User1234!', 'user7@gmail.com', 7),
-    ('user8', 'User1234!', 'user8@gmail.com', 8),
-    ('user9', 'User1234!', 'user9@gmail.com', 9),
-    ('user10', 'User1234!', 'user10@gmail.com', 10);
+    ('user1', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user1@gmail.com', 1),
+    ('user2', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user2@gmail.com', 2),
+    ('user3', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user3@gmail.com', 3),
+    ('user4', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user4@gmail.com', 4),
+    ('user5', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user5@gmail.com', 5),
+    ('user6', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user6@gmail.com', 6),
+    ('user7', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user7@gmail.com', 7),
+    ('user8', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user8@gmail.com', 8),
+    ('user9', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user9@gmail.com', 9),
+    ('user10', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user10@gmail.com', 10);
 
     COMMIT;
+
+    -- original password: User1234!;

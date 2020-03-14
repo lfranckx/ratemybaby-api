@@ -1,7 +1,17 @@
 const bcrypt = require('bcryptjs')
 const xss = require('xss')
 const Treeize = require('treeize')
+const knex = require('knex')
 const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/
+
+const babyFields = [
+    'baby.id AS baby:id',
+    'baby.baby_name AS baby:baby_name',
+    'baby.about AS baby:about',
+    'baby.image_url AS baby:image_url',
+    'baby.total_score AS baby:total_score',
+    'baby.total_votes AS baby:total_votes',
+]
 
 const UsersService = {
     hasUserWithUserName(db, username) {
@@ -34,6 +44,18 @@ const UsersService = {
     },
     hashPassword(password) {
         return bcrypt.hash(password, 12)
+    },
+    getById(knex, id) {
+        return knex('users')
+            .select('*')
+            .where('id', id)
+            .first()
+    },
+    getByUsername(knex, username) {
+        return knex('users')
+            .select('*')
+            .where('username', username)
+            .first()
     },
     serializeUser(user) {
         const userTree = new Treeize()
