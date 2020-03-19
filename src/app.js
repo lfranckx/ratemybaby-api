@@ -27,7 +27,7 @@ app.use(cors())
 app.use('/api/babies', babiesRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/users', usersRouter)
-app.use('/api/file-upload', imageRouter)
+app.use('/api/upload', imageRouter)
 
 app.use(errorHandler)
 

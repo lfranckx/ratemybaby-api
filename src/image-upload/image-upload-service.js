@@ -11,7 +11,10 @@ const s3 = new aws.S3({
   region: config.awsRegion,
   bucket: config.bucket
 })
- 
+
+console.log('region', config.region, 'bucket', config.bucket);
+console.log(config)
+
 const upload = multer({
   storage: multerS3({
     s3: s3,
@@ -23,13 +26,13 @@ const upload = multer({
     key: function (req, file, cb) {
       cb(null, path.basename(file.originalname, path.extname(file.originalname)) 
       + '-' + Date.now().toString())
-    },
-    limits:{ fileSize: 2000000 }, // 2 MB
-    fileFilter: function( req, file, cb ) {
-      checkFileType(file, cb)
     }
-  }).single('image')
-})
+  }),
+  limits:{ fileSize: 2000000 }, // 2 MB
+  fileFilter: function( req, file, cb ) {
+    checkFileType(file, cb)
+  }
+}).single('image')
 
 function checkFileType( file, cb ){
   const fileTypes = /jpeg|jpg|png|gif/
@@ -43,12 +46,3 @@ function checkFileType( file, cb ){
 }
 
 module.exports = upload
-
-
-// const fileFilter = (req, file, cb) => {
-//   if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
-//     cb(null, true)
-//   } else {
-//     cb(new Error(`Invalid Mime Type, only JPEG and PNG`), false)
-//   }
-// }
