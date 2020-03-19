@@ -2,7 +2,6 @@ const aws = require('aws-sdk');
 const multer = require('multer')
 const multerS3 = require('multer-s3')
 const path = require('path')
-// const url = require('url')
 const config = require('../config')
 
 const s3 = new aws.S3({
@@ -11,9 +10,6 @@ const s3 = new aws.S3({
   region: config.awsRegion,
   bucket: config.bucket
 })
-
-console.log('region', config.region, 'bucket', config.bucket);
-console.log(config)
 
 const upload = multer({
   storage: multerS3({
