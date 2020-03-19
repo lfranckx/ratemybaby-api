@@ -1,7 +1,7 @@
 const express = require('express')
 const BabiesService = require('./babies-service')
 const jsonParser = express.json()
-// const { requireAuth } = require('../middleware/jwt-auth')
+const { requireAuth } = require('../middleware/jwt-auth')
 
 const babiesRouter = express.Router()
 
