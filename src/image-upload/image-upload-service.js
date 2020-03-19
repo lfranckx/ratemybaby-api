@@ -2,7 +2,7 @@ const aws = require('aws-sdk');
 const multer = require('multer')
 const multerS3 = require('multer-s3')
 const path = require('path')
-const url = require('url')
+// const url = require('url')
 const config = require('../config')
 
 const s3 = new aws.S3({
@@ -11,14 +11,6 @@ const s3 = new aws.S3({
   region: config.awsRegion,
   bucket: config.bucket
 })
-
-// const fileFilter = (req, file, cb) => {
-//   if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
-//     cb(null, true)
-//   } else {
-//     cb(new Error(`Invalid Mime Type, only JPEG and PNG`), false)
-//   }
-// }
  
 const upload = multer({
   storage: multerS3({
@@ -36,13 +28,13 @@ const upload = multer({
     fileFilter: function( req, file, cb ) {
       checkFileType(file, cb)
     }
-  }).single('image');
+  }).single('image')
 })
 
 function checkFileType( file, cb ){
   const fileTypes = /jpeg|jpg|png|gif/
-  const extname = filetypes.test(path.extname(file.originalname).toLowerCase())
-  const mimetype = filetypes.test(file.mimetype)
+  const extname = fileTypes.test(path.extname(file.originalname).toLowerCase())
+  const mimetype = fileTypes.test(file.mimetype)
   if (mimetype && extname) {
     return cb(null, true)
   } else {
@@ -51,3 +43,12 @@ function checkFileType( file, cb ){
 }
 
 module.exports = upload
+
+
+// const fileFilter = (req, file, cb) => {
+//   if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+//     cb(null, true)
+//   } else {
+//     cb(new Error(`Invalid Mime Type, only JPEG and PNG`), false)
+//   }
+// }
