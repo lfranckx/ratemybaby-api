@@ -7,8 +7,6 @@ const jsonParser = express.json()
 
 usersRouter
     .post('/', jsonParser, (req, res, next) => {
-        console.log('receiving req.body', req.body);
-        
         const { username, user_password, email } = req.body
 
         for (const field of ['username', 'user_password', 'email'])
@@ -58,16 +56,12 @@ usersRouter
     // .all(requireAuth)
     .all(checkUsernameExists)
     .get((req, res) => {
-        console.log(res.user);
-        
         res.json(UsersService.serializeUser(res.user))
     })
 
 // async/await syntax for promises
 async function checkUsernameExists(req, res, next) {
     try {
-        console.log(req.params.username);
-        
         const user = await UsersService.getByUsername(
             req.app.get('db'),
             req.params.username
@@ -86,34 +80,3 @@ async function checkUsernameExists(req, res, next) {
 }
 
 module.exports = usersRouter;
-
-
-// user id route
-// usersRouter
-//     .route('/:user_id')
-//     .all(requireAuth)
-//     .all(checkUserIdExists)
-//     .get((req, res, next) => {
-//         res.json(UsersService.serializeUser(res.user))
-//     })
-
-// async/await syntax for promises
-// async function checkUserIdExists(req, res, next) {
-//     try {
-//         const user = await UsersService.getByUsername(
-//             req.app.get('db'),
-//             req.params.user_id
-//         )
-
-//         if (!user)
-//             return res.status(404).json({
-//                 error: `User does not exist`
-//             })
-
-//             res.user = user
-//             next()
-//     } catch (error) {
-//         next(error)
-//     }
-// }
-    

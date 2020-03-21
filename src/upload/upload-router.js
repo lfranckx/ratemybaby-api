@@ -1,11 +1,12 @@
 const express = require('express')
-const imageRouter = express.Router()
+const uploadRouter = express.Router()
 
-const upload = require('./image-upload-service')
-const multipleUpload = require('./multiple-upload-service')
+const upload = require('./upload-service')
+const multipleUpload = require('./upload-multiple-service')
 
-imageRouter
+uploadRouter
     .post('/', (req, res) => { upload(req, res, (error) => {
+        console.log('request:', req);
         console.log('request ok:', req.file);
         console.log('error:', error);
 
@@ -21,13 +22,13 @@ imageRouter
         const imageName = req.file.key
         const imageLocation = req.file.location
         res.json({
-            image: imageName,
-            location: imageLocation
+            image_name: imageName,
+            image_url: imageLocation
         })
         
     })})
 
-imageRouter
+uploadRouter
     .post('/multiple', (req, res) => {multipleUpload(req, res, (error) => {
         console.log('files:', req.files);
         if ( error ) {
@@ -50,4 +51,4 @@ imageRouter
         })
     })})
 
-module.exports = imageRouter
+module.exports = uploadRouter

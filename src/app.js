@@ -12,7 +12,7 @@ const morganOption = (NODE_ENV === 'production')
 
 const errorHandler = require('./errorHandler')
 const authRouter = require('./auth/auth-router')
-const imageRouter = require('./image-upload/image-router')
+const uploadeRouter = require('./upload/upload-router')
 const usersRouter = require('./users/users-router')
 const babiesRouter = require('./babies/babies-router')
 
@@ -27,7 +27,7 @@ app.use(cors())
 app.use('/api/babies', babiesRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/users', usersRouter)
-app.use('/api/upload', imageRouter)
+app.use('/api/upload', uploadeRouter)
 
 app.use(errorHandler)
 
