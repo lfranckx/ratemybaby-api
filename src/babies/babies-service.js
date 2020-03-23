@@ -62,6 +62,7 @@ const BabiesService = {
         return BabiesService.getAllBabies(db)
             .where('baby.id', id)
             .update(newBabyFields)
+            .then(([baby]) => baby)
     }
 }
 
