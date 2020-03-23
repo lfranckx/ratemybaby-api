@@ -38,10 +38,9 @@ babiesRouter
             req.params.baby_id,
             babyToUpdate
         )
-        .then(baby => {
-            res
-                .status(204)
-                .json(BabiesService.serializeBaby(baby))
+        .then(numRowsAffected => {
+            console.log(numRowsAffected);
+            res.json(numRowsAffected).status(204).end()
         })
         .catch(next)
     })

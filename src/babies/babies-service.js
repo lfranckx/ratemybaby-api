@@ -43,9 +43,6 @@ const BabiesService = {
     serializeBaby(baby) {
         const babyTree = new Treeize()
 
-        // Some light hackiness to allow for the fact that `treeize`
-        // only accepts arrays of objects, and we want to use a single
-        // object.
         const babyData = babyTree.grow([baby]).getData()[0]
 
         return {
@@ -62,7 +59,6 @@ const BabiesService = {
         return BabiesService.getAllBabies(db)
             .where('baby.id', id)
             .update(newBabyFields)
-            .then(([baby]) => baby)
     }
 }
 
