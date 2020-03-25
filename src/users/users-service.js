@@ -1,7 +1,6 @@
 const bcrypt = require('bcryptjs')
 const xss = require('xss')
 const Treeize = require('treeize')
-const knex = require('knex')
 const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/
 
 const UsersService = {
@@ -57,8 +56,7 @@ const UsersService = {
             username: xss(userData.username),
             user_password: xss(userData.user_password),
             email: xss(userData.email),
-            date_created: new Date(userData.date_created)
-            // user: userData.baby || {}
+            date_created: new Date(userData.date_created),
         }
     },
 }

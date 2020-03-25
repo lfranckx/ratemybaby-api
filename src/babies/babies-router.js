@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const BabiesService = require('./babies-service')
 const jsonParser = express.json()
 // const { requireAuth } = require('../middleware/jwt-auth')
@@ -14,28 +15,56 @@ babiesRouter
             })
             .catch(next)
     })
+    .post(jsonParser, (req, res, next) => {
+        const { baby_name, about, image_url, total_score, total_votes, parent_id } = req.body
+        const newBaby = { baby_name, about, image_url, total_score, total_votes, parent_id }
+        // console.log('inside babies.router.post | line 21 | req.body', newBaby);
+
+        for (const [key, value] of Object.entries(newBaby))
+            if (value == null)
+                return res.status(400).json({
+                    error: `Missing ${key} in request body`
+                })
+        
+        return BabiesService.insertBaby(
+            req.app.get('db'),
+            newBaby
+        )
+        .then(baby => {
+            res
+                .status(201)
+                .location(path.posix.join(req.originalUrl, `/${baby.parent_id}`))
+                .json(BabiesService.serializeBaby(baby))
+        })
+        .catch(next)
+    })
 
 babiesRouter
-    .route('/:baby_id')
+    .route('/:parent_id')
+    // .all(requireAuth)
     .all(checkBabyExists)
     .get((req, res) => {
+        // console.log('babies-router | line 48 | req:', req);
         res.json(BabiesService.serializeBaby(res.baby))
     })
     .patch(jsonParser, (req, res, next) => {
-        const { baby_name, about, image_url, total_score, total_votes, parent_id } = req.body
-        const babyToUpdate = { baby_name, about, image_url, total_score, total_votes, parent_id }
+        console.log('inside babies.router.PATCH | line 51 | req.body:', req.body);
+        const { id, baby_name, about, image_url, total_score, total_votes, parent_id } = req.body
+        const babyToUpdate = { id, baby_name, about, image_url, total_score, total_votes, parent_id }
         
         const numberOfValues = Object.values(babyToUpdate).filter(Boolean).length
         if (numberOfValues === 0)
             return res.status(400).json({
                 error: {
-                    message: `Request body must contain baby_name, about, image_url, total_score, or total_votes`
+                    message: `Request body must contain id, baby_name, about, image_url, total_score, total_votes, or parent_id`
                 }
             })
+
+        console.log('inside babiesRouter.PATCH | line 63 | req.params:', req.params );
         
         BabiesService.updateBaby(
             req.app.get('db'),
-            req.params.baby_id,
+            req.params.parent_id,
             babyToUpdate
         )
         .then(numRowsAffected => {
@@ -47,10 +76,12 @@ babiesRouter
 
 // async/await syntax for promises
 async function checkBabyExists(req, res, next) {
+    // console.log('inside checkBabyExists | line 76 | req', req);
+    
     try {
-        const baby = await BabiesService.getById(
+        const baby = await BabiesService.getByParentId(
             req.app.get('db'),
-            req.params.baby_id
+            req.params.parent_id
         )
 
         if (!baby)

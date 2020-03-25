@@ -1,42 +1,31 @@
 const xss = require('xss')
 const Treeize = require('treeize')
 
-const userFields = [
-    'user.id AS user:id',
-    'user.username AS user:username',
-    'user.user_password AS user:user_password',
-    'user.email AS user:user_email',
-    'user.date_created AS user:date_created',
-    'user.date_modified AS user:date_modified'
-]
-
 const BabiesService = {
-    getAllBabies(db) {
-        return db
-            .from('user_babies AS baby')
-            .select(
-                'baby.id',
-                'baby.baby_name',
-                'baby.about',
-                'baby.image_url',
-                'baby.total_score',
-                'baby.total_votes',
-                'baby.date_created',
-                'baby.date_modified',
-                'baby.parent_id',
-                ...userFields
-            )
-            .leftJoin(
-                'users AS user',
-                'baby.parent_id',
-                'user.id'
-            )
-            .groupBy('baby.id', 'user.id')
+    getAllBabies(knex) {
+        return knex.select('*').from('user_babies')
     },
-    getById (db, id) {
-        return BabiesService.getAllBabies(db)
-            .where('baby.id', id)
+    getByBabyId (knex, id) {
+        return knex
+            .from('user_babies')
+            .select('*')
+            .where('id', id)
             .first()
+    },
+    getByParentId (knex, parent_id) {
+        console.log(`inside BabiesService.getByParentId(${parent_id})`);
+        return knex
+            .from('user_babies')
+            .select('*')
+            .where('parent_id', parent_id)
+            .first()
+    },
+    insertBaby(db, newBaby) {
+        return db
+            .insert(newBaby)
+            .into('user_babies')
+            .return('*')
+            .then(([baby]) => baby)
     },
     serializeBabies(babies) {
         return babies.map(this.serializeBaby)
@@ -54,12 +43,11 @@ const BabiesService = {
             total_score: Number(babyData.total_score),
             total_votes: Number(babyData.total_votes),
             parent_id: babyData.parent_id,
-            user: babyData.user || {}
         }
     },
-    updateBaby(db, id, newBabyFields) {
-        return BabiesService.getAllBabies(db)
-            .where('baby.id', id)
+    updateBaby(knex, parent_id, newBabyFields) {
+        return knex('user_babies')
+            .where({ parent_id })
             .update(newBabyFields)
     }
 }

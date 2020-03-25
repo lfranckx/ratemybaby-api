@@ -8,7 +8,6 @@ const jsonParser = express.json()
 usersRouter
     .post('/', jsonParser, (req, res, next) => {
         const { username, user_password, email } = req.body
-
         for (const field of ['username', 'user_password', 'email'])
             if(!req.body[field])
                 return res.status(400).json({
@@ -23,37 +22,32 @@ usersRouter
                     req.app.get('db'),
                     username
                 )
-                    .then(hasUserWithUserName => {
-                        if (hasUserWithUserName)
-                            return res.status(400).json({ error: `Username already taken` })
+                .then(hasUserWithUserName => {
+                    if (hasUserWithUserName)
+                        return res.status(400).json({ error: `Username already taken` })
 
-                            return UsersService.hashPassword(user_password)
-                                .then(hashedPassword => {
-                                    const newUser = {
-                                        username,
-                                        user_password: hashedPassword,
-                                        email,
-                                        date_created: 'now()',
-                                    }
+                        return UsersService.hashPassword(user_password)
+                        .then(hashedPassword => {
+                            const newUser = {
+                                username,
+                                user_password: hashedPassword,
+                                email,
+                                date_created: 'now()',
+                            }
 
-                                    return UsersService.insertUser(
-                                        req.app.get('db'),
-                                        newUser
-                                    )
-                                        .then(user => {
-                                            console.log('running insertUser:', user);
-                                            
-                                            res
-                                                .status(201)
-                                                .location(path.posix.join(req.originalUrl, `/${user.id}`))
-                                                .json(UsersService.serializeUser(user))
-
-                                                console.log('server response:', res);
-                                                
-                                        })
-                                })
-                    })
-                    .catch(next)
+                            return UsersService.insertUser(
+                                req.app.get('db'),
+                                newUser
+                            )
+                            .then(user => {
+                                res
+                                    .status(201)
+                                    .location(path.posix.join(req.originalUrl, `/${user.id}`))
+                                    .json(UsersService.serializeUser(user))
+                            })
+                        })
+                })
+                .catch(next)
     })
 
 usersRouter
