@@ -1,4 +1,4 @@
-ALTER TABLE users
+ALTER TABLE user_babies
     DROP COLUMN IF EXISTS user_id;
 
 DROP TABLE IF EXISTS users;

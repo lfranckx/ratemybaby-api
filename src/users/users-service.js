@@ -49,11 +49,9 @@ const UsersService = {
             .first()
     },
     serializeUser(user) {
+        console.log(user);
+        
         const userTree = new Treeize()
-
-        // Some light hackiness to allow for the fact that `treeize`
-        // only accepts arrays of objects, and we want to use a single
-        // object.
         const userData = userTree.grow([user]).getData()[0]
 
         return {
@@ -61,9 +59,8 @@ const UsersService = {
             username: xss(userData.username),
             user_password: xss(userData.user_password),
             email: xss(userData.email),
-            date_created: new Date(userData.date_created),
-            baby_id: userData.baby_id,
-            user: userData.baby || {}
+            date_created: new Date(userData.date_created)
+            // user: userData.baby || {}
         }
     },
 }

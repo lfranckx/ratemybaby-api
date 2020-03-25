@@ -1,7 +1,7 @@
 const express = require('express')
 const BabiesService = require('./babies-service')
 const jsonParser = express.json()
-const { requireAuth } = require('../middleware/jwt-auth')
+// const { requireAuth } = require('../middleware/jwt-auth')
 
 const babiesRouter = express.Router()
 
@@ -22,8 +22,8 @@ babiesRouter
         res.json(BabiesService.serializeBaby(res.baby))
     })
     .patch(jsonParser, (req, res, next) => {
-        const { baby_name, about, image_url, total_score, total_votes } = req.body
-        const babyToUpdate = { baby_name, about, image_url, total_score, total_votes }
+        const { baby_name, about, image_url, total_score, total_votes, parent_id } = req.body
+        const babyToUpdate = { baby_name, about, image_url, total_score, total_votes, parent_id }
         
         const numberOfValues = Object.values(babyToUpdate).filter(Boolean).length
         if (numberOfValues === 0)

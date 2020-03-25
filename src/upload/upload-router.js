@@ -17,7 +17,6 @@ uploadRouter
         const imageName = req.file.key
         const imageLocation = req.file.location
 
-        
         res.json({
             image_name: imageName,
             image_url: imageLocation
