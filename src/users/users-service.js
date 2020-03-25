@@ -48,9 +48,7 @@ const UsersService = {
             .where('username', username)
             .first()
     },
-    serializeUser(user) {
-        console.log(user);
-        
+    serializeUser(user) {        
         const userTree = new Treeize()
         const userData = userTree.grow([user]).getData()[0]
 

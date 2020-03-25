@@ -41,10 +41,15 @@ usersRouter
                                         newUser
                                     )
                                         .then(user => {
+                                            console.log('running insertUser:', user);
+                                            
                                             res
                                                 .status(201)
                                                 .location(path.posix.join(req.originalUrl, `/${user.id}`))
                                                 .json(UsersService.serializeUser(user))
+
+                                                console.log('server response:', res);
+                                                
                                         })
                                 })
                     })
