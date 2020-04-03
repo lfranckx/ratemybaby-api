@@ -253,3 +253,21 @@
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"parent_id\", \"total_score\", \"total_votes\") values ($1, $2, $3, $4, $5, $6) - null value in column \"age\" violates not-null constraint","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"parent_id\", \"total_score\", \"total_votes\") values ($1, $2, $3, $4, $5, $6) - null value in column \"age\" violates not-null constraint","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"parent_id\", \"total_score\", \"total_votes\") values ($1, $2, $3, $4, $5, $6) - null value in column \"age\" violates not-null constraint","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"parent_id\", \"total_score\", \"total_votes\") values ($1, $2, $3, $4, $5, $6) - null value in column \"age\" violates not-null constraint","level":"error"}
+{"message":"insert into \"user_babies\" (\"about\", \"baby_name\", \"image_url\", \"parent_id\", \"total_score\", \"total_votes\") values ($1, $2, $3, $4, $5, $6) - null value in column \"age\" violates not-null constraint","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"insert into \"users\" (\"date_created\", \"email\", \"user_password\", \"username\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}

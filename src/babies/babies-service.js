@@ -38,6 +38,8 @@ const BabiesService = {
         return {
             id: babyData.id,
             baby_name: xss(babyData.baby_name),
+            age: xss(babyData.age),
+            country: xss(babyData.country),
             about: xss(babyData.about),
             image_url: xss(babyData.image_url),
             total_score: Number(babyData.total_score),
