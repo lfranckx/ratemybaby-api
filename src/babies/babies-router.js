@@ -49,8 +49,8 @@ babiesRouter
     })
     .patch(jsonParser, (req, res, next) => {
         console.log('inside babies.router.PATCH | line 51 | req.body:', req.body);
-        const { id, baby_name, about, image_url, total_score, total_votes, parent_id } = req.body
-        const babyToUpdate = { id, baby_name, about, image_url, total_score, total_votes, parent_id }
+        const { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id } = req.body
+        const babyToUpdate = { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id }
         
         const numberOfValues = Object.values(babyToUpdate).filter(Boolean).length
         if (numberOfValues === 0)
