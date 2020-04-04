@@ -3,7 +3,7 @@ const express = require('express')
 const UsersService = require('./users-service')
 const usersRouter = express.Router()
 const jsonParser = express.json()
-// const { requireAuth } = express.json()
+const { requireAuth } = require('../middleware/jwt-auth')
 
 usersRouter
     .post('/', jsonParser, (req, res, next) => {
@@ -52,7 +52,7 @@ usersRouter
 
 usersRouter
     .route('/:username')
-    // .all(requireAuth)
+    .all(requireAuth)
     .all(checkUsernameExists)
     .get((req, res) => {
         res.json(UsersService.serializeUser(res.user))

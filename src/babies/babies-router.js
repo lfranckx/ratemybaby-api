@@ -2,12 +2,13 @@ const express = require('express')
 const path = require('path')
 const BabiesService = require('./babies-service')
 const jsonParser = express.json()
-// const { requireAuth } = require('../middleware/jwt-auth')
+const { requireAuth } = require('../middleware/jwt-auth')
 
 const babiesRouter = express.Router()
 
 babiesRouter
     .route('/')
+    // .all(requireAuth)
     .get((req, res, next) => {
         BabiesService.getAllBabies(req.app.get('db'))
             .then(babies => {
@@ -41,13 +42,13 @@ babiesRouter
 
 babiesRouter
     .route('/:parent_id')
-    // .all(requireAuth)
+    .all(requireAuth)
     .all(checkBabyExists)
-    .get((req, res) => {
+    .get(requireAuth, (req, res) => {
         // console.log('babies-router | line 48 | req:', req);
         res.json(BabiesService.serializeBaby(res.baby))
     })
-    .patch(jsonParser, (req, res, next) => {
+    .patch(requireAuth, jsonParser, (req, res, next) => {
         console.log('inside babies.router.PATCH | line 51 | req.body:', req.body);
         const { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id } = req.body
         const babyToUpdate = { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id }
@@ -76,8 +77,6 @@ babiesRouter
 
 // async/await syntax for promises
 async function checkBabyExists(req, res, next) {
-    // console.log('inside checkBabyExists | line 76 | req', req);
-    
     try {
         const baby = await BabiesService.getByParentId(
             req.app.get('db'),

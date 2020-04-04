@@ -1,11 +1,12 @@
 const express = require('express')
 const uploadRouter = express.Router()
+const { requireAuth } = require('../middleware/jwt-auth')
 
 const upload = require('./upload-service')
 const multipleUpload = require('./upload-multiple-service')
 
 uploadRouter
-    .post('/', (req, res) => { upload(req, res, (error) => {
+    .post('/', requireAuth, (req, res) => { upload(req, res, (error) => {
         console.log('inside uploadRouter.POST req.file:', req.file);
         if(error) {
             return res.status(400).json({ error: error })
@@ -24,7 +25,7 @@ uploadRouter
     })})
 
 uploadRouter
-    .post('/multiple', (req, res) => {multipleUpload(req, res, (error) => {
+    .post('/multiple', requireAuth, (req, res) => {multipleUpload(req, res, (error) => {
         console.log('files:', req.files);
         if ( error ) {
             console.log( 'errors', error )
