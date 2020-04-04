@@ -288,3 +288,5 @@
 {"message":"update \"user_babies\" set \"id\" = $1, \"baby_name\" = $2, \"age\" = $3, \"country\" = $4, \"about\" = $5, \"image_url\" = $6, \"total_score\" = $7, \"total_votes\" = $8, \"parent_id\" = $9 where \"parent_id\" = $10 - duplicate key value violates unique constraint \"user_babies_pkey\"","level":"error"}
 {"message":"update \"user_babies\" set \"id\" = $1, \"baby_name\" = $2, \"age\" = $3, \"country\" = $4, \"about\" = $5, \"image_url\" = $6, \"total_score\" = $7, \"total_votes\" = $8, \"parent_id\" = $9 where \"parent_id\" = $10 - duplicate key value violates unique constraint \"user_babies_pkey\"","level":"error"}
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"insert into \"users\" (\"date_created\", \"email\", \"user_password\", \"username\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
