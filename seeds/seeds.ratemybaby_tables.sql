@@ -5,22 +5,23 @@ TRUNCATE
     user_babies
     RESTART IDENTITY CASCADE;
 
-INSERT INTO users (username, user_password, email)
+INSERT INTO users (username, user_password, email, baby_ids)
 VALUES
-    ('user1', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user1@gmail.com'),
-    ('user2', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user2@gmail.com'),
-    ('user3', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user3@gmail.com'),
-    ('user4', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user4@gmail.com'),
-    ('user5', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user5@gmail.com'),
-    ('user6', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user6@gmail.com'),
-    ('user7', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user7@gmail.com'),
-    ('user8', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user8@gmail.com'),
-    ('user9', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user9@gmail.com'),
-    ('user10', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user10@gmail.com');
+    ('user1', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user1@gmail.com', ARRAY [1]),
+    ('user2', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user2@gmail.com', ARRAY [1]),
+    ('user3', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user3@gmail.com', ARRAY [1]),
+    ('user4', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user4@gmail.com', ARRAY [1]),
+    ('user5', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user5@gmail.com', ARRAY [1]),
+    ('user6', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user6@gmail.com', ARRAY [1]),
+    ('user7', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user7@gmail.com', ARRAY [1]),
+    ('user8', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user8@gmail.com', ARRAY [1]),
+    ('user9', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user9@gmail.com', ARRAY [1]),
+    ('user10', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user10@gmail.com', ARRAY [1]);
 
-INSERT INTO user_babies (baby_name, age, country, about, image_url, total_score, total_votes, parent_id)
+INSERT INTO user_babies (baby_id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id)
 VALUES
     (
+        1,
         'Noah', 
         '2',
         'Indonesia',
@@ -31,6 +32,7 @@ VALUES
         1
     ),
     (
+        1,
         'Emma', 
         '3',
         'UK',
@@ -41,6 +43,7 @@ VALUES
         2
     ),
     (
+        1,
         'Frank', 
         '16 months',
         'United States of America',
@@ -51,6 +54,7 @@ VALUES
         3
     ),
     (
+        1,
         'CJ', 
         '13 months',
         'United States of America',
@@ -61,6 +65,7 @@ VALUES
         4
     ),
     (
+        1,
         'Kylie', 
         '15 months',
         'United States of America',
@@ -71,6 +76,7 @@ VALUES
         5
     ),
     (
+        1,
         'Stephen', 
         '1 year',
         'China',
@@ -81,6 +87,7 @@ VALUES
         6
     ),
     (
+        1,
         'Lauren', 
         '18 months',
         'Britain',
@@ -91,6 +98,7 @@ VALUES
         7
     ),
     (
+        1,
         'Dan',
         '14 months',
         'South Africa', 
@@ -101,6 +109,7 @@ VALUES
         8
     ),
     (
+        1,
         'John', 
         '11 months',
         'United States of America',
@@ -111,6 +120,7 @@ VALUES
         9
     ),
     (
+        1,
         'Danielle', 
         '2 years',
         'United States of America',

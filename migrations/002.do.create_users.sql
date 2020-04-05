@@ -3,6 +3,7 @@ CREATE TABLE users (
     username TEXT NOT NULL UNIQUE,
     user_password TEXT NOT NULL,
     email TEXT NOT NULL,
+    baby_ids INT [],
     date_created TIMESTAMP NOT NULL DEFAULT now(),
     date_modified TIMESTAMP
 );
