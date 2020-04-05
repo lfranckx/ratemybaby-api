@@ -305,3 +305,4 @@
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"database \"ratemybaby\" does not exist","level":"error"}
