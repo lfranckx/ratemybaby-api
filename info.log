@@ -290,3 +290,18 @@
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
 {"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
 {"message":"insert into \"users\" (\"date_created\", \"email\", \"user_password\", \"username\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"users_username_key\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
+{"message":"select * from \"user_babies\" where \"parent_id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}

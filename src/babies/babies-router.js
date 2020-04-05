@@ -45,7 +45,7 @@ babiesRouter
     .all(requireAuth)
     .all(checkBabyExists)
     .get(requireAuth, (req, res) => {
-        // console.log('babies-router | line 48 | req:', req);
+        console.log('babies-router | line 48 | req:', req);
         res.json(BabiesService.serializeBaby(res.baby))
     })
     .patch(requireAuth, jsonParser, (req, res, next) => {
