@@ -71,7 +71,7 @@ babiesRouter
             babyToUpdate
         )
         .then(numRowsAffected => {
-            console.log(numRowsAffected);
+            // console.log(numRowsAffected);
             res.json(numRowsAffected).status(204).end()
         })
         .catch(next)
@@ -82,13 +82,13 @@ babiesRouter
     .all(requireAuth)
     .all(checkBabiesExists)
     .get(requireAuth, (req, res) => {
-        console.log('babies-router | line 85 | req:', req);
+        // console.log('babies-router | line 85 | req:', req);
         res.json(BabiesService.serializeBabies(res.babies))
     })
 
 async function checkBabiesExists(req, res, next) {
     try {
-        console.log('inside checkBabiesExists');
+        // console.log('inside checkBabiesExists');
         
         const babies = await BabiesService.getByParentId(
             req.app.get('db'),
