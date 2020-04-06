@@ -19,7 +19,7 @@ babiesRouter
     .post(jsonParser, (req, res, next) => {
         const { baby_name, age, country, about, image_url, total_score, total_votes, parent_id } = req.body
         const newBaby = { baby_name, age, country, about, image_url, total_score, total_votes, parent_id }
-        // console.log('inside babies.router.post | line 21 | req.body', newBaby);
+        console.log('inside babies.router.post | line 21 | req.body', newBaby);
 
         for (const [key, value] of Object.entries(newBaby))
             if (value == null)
