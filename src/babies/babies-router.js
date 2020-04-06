@@ -78,19 +78,42 @@ babiesRouter
     })
 
 babiesRouter
-    .route('/parent/id')
+    .route('/parent/parent_id')
     .all(requireAuth)
-    .all(checkBabyExists)
+    .all(checkBabiesExists)
+    // .get(requireAuth, (req, res) => {
+    //     console.log('babies-router | line 48 | req:', req);
+    //     res.json(BabiesService.serializeBaby(res.baby))
+    // })
     .get(requireAuth, (req, res, next) => {
-        console.log('babies-router | line 92 | req:', req);
-        BabiesService.getByParentId(req.app.get('db'))
-            .then(babies => {
-                res.json(BabiesService.serializeBabies(babies))
-            })
-            .catch(next)
+        console.log('babies-router | line 84 | req:', req);
+        res.json(BabiesService.serializeBabies(res.babies))
+        // BabiesService.getByParentId(req.app.get('db'))
+        //     .then(babies => {
+        //         res.json(BabiesService.serializeBabies(babies))
+        //     })
+        //     .catch(next)
     })
 
-// async/await syntax for promises
+async function checkBabiesExists(req, res, next) {
+    try {
+        const babies = await BabiesService.getByParentId(
+            req.app.get('db'),
+            req.params.parent_id
+        )
+
+        if (!babies)
+            return res.status(404).json({
+                error: `Babies don't exist`
+            })
+
+            res.babies = babies
+            next()
+    } catch (error) {
+        next(error)
+    }
+}
+
 async function checkBabyExists(req, res, next) {
     try {
         const baby = await BabiesService.getById(

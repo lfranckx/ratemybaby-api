@@ -21,7 +21,7 @@ const BabiesService = {
             .first()
     },
     getByParentId (knex, parent_id) {
-        console.log(`inside BabiesService.getByParentId(${id})`);
+        console.log(`inside BabiesService.getByParentId(${parent_id})`);
         return knex
             .select('*')
             .from('user_babies')
