@@ -24,7 +24,7 @@ const BabiesService = {
         return db
             .insert(newBaby)
             .into('user_babies')
-            .return('*')
+            .returning('*')
             .then(([baby]) => baby)
     },
     serializeBabies(babies) {
