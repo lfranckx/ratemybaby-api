@@ -78,11 +78,16 @@ babiesRouter
     })
 
 babiesRouter
-    .route('/:parent/:parent_id')
+    .route('/parent_id')
     .all(requireAuth)
-    .all(checkBabiesExists)
+    // .all(checkBabiesExists)
     .get(requireAuth, (req, res) => {
-        // console.log('babies-router | line 85 | req:', req);
+        console.log('babies-router | line 85 | req.user:', req.user);
+        
+        BabiesService.getByParentId(
+            req.app.get('db'),
+            req.user.id
+        )
         res.json(BabiesService.serializeBabies(res.babies))
     })
 
