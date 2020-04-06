@@ -12,12 +12,12 @@ const BabiesService = {
             .where('id', id)
             .first()
     },
-    getByParentId (knex, parent_id) {
-        console.log(`inside BabiesService.getByParentId(${parent_id})`);
+    getById (knex, id) {
+        console.log(`inside BabiesService.getByParentId(${id})`);
         return knex
             .from('user_babies')
             .select('*')
-            .where('parent_id', parent_id)
+            .where('id', id)
             .first()
     },
     insertBaby(db, newBaby) {

@@ -43,7 +43,7 @@ babiesRouter
     })
 
 babiesRouter
-    .route('/:parent_id')
+    .route('/:id')
     .all(requireAuth)
     .all(checkBabyExists)
     .get(requireAuth, (req, res) => {
@@ -67,7 +67,7 @@ babiesRouter
         
         BabiesService.updateBaby(
             req.app.get('db'),
-            req.params.parent_id,
+            req.params.id,
             babyToUpdate
         )
         .then(numRowsAffected => {
@@ -80,9 +80,9 @@ babiesRouter
 // async/await syntax for promises
 async function checkBabyExists(req, res, next) {
     try {
-        const baby = await BabiesService.getByParentId(
+        const baby = await BabiesService.getById(
             req.app.get('db'),
-            req.params.parent_id
+            req.params.id
         )
 
         if (!baby)
