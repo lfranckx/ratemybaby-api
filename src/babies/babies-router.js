@@ -36,6 +36,8 @@ babiesRouter
                 .status(201)
                 .location(path.posix.join(req.originalUrl, `/${baby.parent_id}`))
                 .json(BabiesService.serializeBaby(baby))
+                console.log('inside babies-router postBaby response:', res.body);
+                
         })
         .catch(next)
     })
