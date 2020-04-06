@@ -26,7 +26,6 @@ const BabiesService = {
             .select('*')
             .from('user_babies')
             .where('parent_id', parent_id)
-            .first()
     },
     insertBaby(db, newBaby) {
         return db

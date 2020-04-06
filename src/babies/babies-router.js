@@ -51,7 +51,7 @@ babiesRouter
         res.json(BabiesService.serializeBaby(res.baby))
     })
     .patch(requireAuth, jsonParser, (req, res, next) => {
-        console.log('inside babies.router.PATCH | line 51 | req.body:', req.body);
+        console.log('inside babies.router.PATCH | line 54 | req.body:', req.body);
         const { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id } = req.body
         const babyToUpdate = { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id }
         
@@ -78,25 +78,18 @@ babiesRouter
     })
 
 babiesRouter
-    .route('/parent/parent_id')
+    .route('/:parent/:parent_id')
     .all(requireAuth)
     .all(checkBabiesExists)
-    // .get(requireAuth, (req, res) => {
-    //     console.log('babies-router | line 48 | req:', req);
-    //     res.json(BabiesService.serializeBaby(res.baby))
-    // })
-    .get(requireAuth, (req, res, next) => {
-        console.log('babies-router | line 84 | req:', req);
+    .get(requireAuth, (req, res) => {
+        console.log('babies-router | line 85 | req:', req);
         res.json(BabiesService.serializeBabies(res.babies))
-        // BabiesService.getByParentId(req.app.get('db'))
-        //     .then(babies => {
-        //         res.json(BabiesService.serializeBabies(babies))
-        //     })
-        //     .catch(next)
     })
 
 async function checkBabiesExists(req, res, next) {
     try {
+        console.log('inside checkBabiesExists');
+        
         const babies = await BabiesService.getByParentId(
             req.app.get('db'),
             req.params.parent_id
