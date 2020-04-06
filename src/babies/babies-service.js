@@ -13,11 +13,19 @@ const BabiesService = {
             .first()
     },
     getById (knex, id) {
-        console.log(`inside BabiesService.getByParentId(${id})`);
+        console.log(`inside BabiesService.getById(${id})`);
         return knex
             .from('user_babies')
             .select('*')
             .where('id', id)
+            .first()
+    },
+    getByParentId (knex, parent_id) {
+        console.log(`inside BabiesService.getByParentId(${id})`);
+        return knex
+            .select('*')
+            .from('user_babies')
+            .where('parent_id', parent_id)
             .first()
     },
     insertBaby(db, newBaby) {

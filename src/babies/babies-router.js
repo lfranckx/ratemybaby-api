@@ -77,6 +77,19 @@ babiesRouter
         .catch(next)
     })
 
+babiesRouter
+    .route('/parent/id')
+    .all(requireAuth)
+    .all(checkBabyExists)
+    .get(requireAuth, (req, res, next) => {
+        console.log('babies-router | line 92 | req:', req);
+        BabiesService.getByParentId(req.app.get('db'))
+            .then(babies => {
+                res.json(BabiesService.serializeBabies(babies))
+            })
+            .catch(next)
+    })
+
 // async/await syntax for promises
 async function checkBabyExists(req, res, next) {
     try {
