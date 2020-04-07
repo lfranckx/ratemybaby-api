@@ -3,6 +3,8 @@ const Treeize = require('treeize')
 
 const BabiesService = {
     getAllBabies(knex) {
+        console.log('running getAllBabies()');
+        
         return knex.select('*').from('user_babies')
     },
     getByBabyId (knex, id) {

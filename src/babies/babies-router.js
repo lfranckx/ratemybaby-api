@@ -16,9 +16,10 @@ babiesRouter
             })
             .catch(next)
     })
-    .post(jsonParser, (req, res, next) => {
-        const { baby_name, age, country, about, image_url, total_score, total_votes, parent_id } = req.body
-        const newBaby = { baby_name, age, country, about, image_url, total_score, total_votes, parent_id }
+    .post(requireAuth, jsonParser, (req, res, next) => {
+        const { baby_name, age, country, about, image_url, total_score, total_votes } = req.body
+        const newBaby = { baby_name, age, country, about, image_url, total_score, total_votes }
+        newBaby.parent_id = req.user.id
         console.log('inside babies.router.post | line 21 | req.body', newBaby);
 
         for (const [key, value] of Object.entries(newBaby))
@@ -78,28 +79,20 @@ babiesRouter
     })
 
 babiesRouter
-    .route('/parent_id')
+    .route('/parent/id')
     .all(requireAuth)
-    // .all(checkBabiesExists)
+    .all(checkBabiesExists)
     .get(requireAuth, (req, res) => {
         console.log('babies-router | line 85 | req.user:', req.user);
-        
-        BabiesService.getByParentId(
-            req.app.get('db'),
-            req.user.id
-        )
         res.json(BabiesService.serializeBabies(res.babies))
     })
 
 async function checkBabiesExists(req, res, next) {
     try {
-        // console.log('inside checkBabiesExists');
-        
         const babies = await BabiesService.getByParentId(
             req.app.get('db'),
-            req.params.parent_id
+            req.user.id
         )
-
         if (!babies)
             return res.status(404).json({
                 error: `Babies don't exist`
