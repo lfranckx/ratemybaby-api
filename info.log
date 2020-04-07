@@ -341,3 +341,5 @@
 {"message":"select * from \"user_babies\" where \"id\" = $1 limit $2 - invalid input syntax for type integer: \"undefined\"","level":"error"}
 {"message":"update \"user_babies\" set \"id\" = $1, \"baby_name\" = $2, \"about\" = $3 where \"parent_id\" = $4 - duplicate key value violates unique constraint \"user_babies_pkey\"","level":"error"}
 {"message":"update \"user_babies\" set \"id\" = $1, \"baby_name\" = $2, \"about\" = $3 where \"parent_id\" = $4 - duplicate key value violates unique constraint \"user_babies_pkey\"","level":"error"}
+{"message":"update \"user_babies\" set \"id\" = $1, \"baby_name\" = $2, \"about\" = $3 where \"parent_id\" = $4 - duplicate key value violates unique constraint \"user_babies_pkey\"","level":"error"}
+{"message":"update \"user_babies\" set \"id\" = $1, \"baby_name\" = $2, \"about\" = $3 where \"parent_id\" = $4 - duplicate key value violates unique constraint \"user_babies_pkey\"","level":"error"}

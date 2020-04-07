@@ -56,9 +56,9 @@ const BabiesService = {
             parent_id: babyData.parent_id,
         }
     },
-    updateBaby(knex, parent_id, newBabyFields) {
+    updateBaby(knex, id, newBabyFields) {
         return knex('user_babies')
-            .where({ parent_id })
+            .where({ id })
             .update(newBabyFields)
     }
 }

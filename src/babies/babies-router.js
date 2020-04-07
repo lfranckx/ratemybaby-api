@@ -72,7 +72,6 @@ babiesRouter
             babyToUpdate
         )
         .then(numRowsAffected => {
-            // console.log(numRowsAffected);
             res.json(numRowsAffected).status(204).end()
         })
         .catch(next)
