@@ -32,7 +32,7 @@ VALUES
     ),
     (
         'Emma', 
-        '3 years',
+        '1 year',
         'UK',
         'Half crazy, half sane.
         A bit of a gypsy.
@@ -44,7 +44,7 @@ VALUES
     ),
     (
         'Frank', 
-        '16 months',
+        '6 months',
         'United States',
         'Do not look at me.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Frank.jpg',
@@ -53,8 +53,8 @@ VALUES
         3
     ),
     (
-        'CJ', 
-        '13 months',
+        'James', 
+        '3 months',
         'United States',
         'Match my hustle. Iron sharpens Iron.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/CJ.jpg',
@@ -64,7 +64,7 @@ VALUES
     ),
     (
         'Kylie', 
-        '15 months',
+        '1 year',
         'United States',
         'Chill, music lover, positive, inspiring, kind.✨',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Kylie.jpg',
@@ -74,7 +74,7 @@ VALUES
     ),
     (
         'Stephen', 
-        '1 year',
+        '3 months',
         'China',
         'Fun facts 🎉
         🌮 Food lover
@@ -86,7 +86,7 @@ VALUES
     ),
     (
         'Lauren', 
-        '18 months',
+        '4 months',
         'United States',
         'Damn I’m tired 😴',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Lauren.jpg',
@@ -96,7 +96,7 @@ VALUES
     ),
     (
         'Dan',
-        '14 months',
+        '6 months',
         'United States', 
         'I like to Netflix before chill.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Dan.jpg',
@@ -116,7 +116,7 @@ VALUES
     ),
     (
         'Danielle', 
-        '2 years',
+        '8 months',
         'United States',
         'I love pugs, bugs, and Disney. I am a Disney princess 👸🏻 but basically Satan.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Danielle.jpg',
