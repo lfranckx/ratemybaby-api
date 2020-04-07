@@ -3,8 +3,6 @@ const Treeize = require('treeize')
 
 const BabiesService = {
     getAllBabies(knex) {
-        console.log('running getAllBabies()');
-        
         return knex.select('*').from('user_babies')
     },
     getByBabyId (knex, id) {
@@ -15,7 +13,6 @@ const BabiesService = {
             .first()
     },
     getById (knex, id) {
-        console.log(`inside BabiesService.getById(${id})`);
         return knex
             .from('user_babies')
             .select('*')
@@ -23,7 +20,6 @@ const BabiesService = {
             .first()
     },
     getByParentId (knex, parent_id) {
-        console.log(`inside BabiesService.getByParentId(${parent_id})`);
         return knex
             .select('*')
             .from('user_babies')
@@ -41,7 +37,6 @@ const BabiesService = {
     },
     serializeBaby(baby) {
         const babyTree = new Treeize()
-
         const babyData = babyTree.grow([baby]).getData()[0]
 
         return {

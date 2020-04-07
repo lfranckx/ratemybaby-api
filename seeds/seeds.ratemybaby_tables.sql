@@ -126,5 +126,3 @@ VALUES
     );
 
 COMMIT;
-
--- original password: User1234!;

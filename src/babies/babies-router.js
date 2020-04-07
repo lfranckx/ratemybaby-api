@@ -8,7 +8,6 @@ const babiesRouter = express.Router()
 
 babiesRouter
     .route('/')
-    // .all(requireAuth)
     .get((req, res, next) => {
         BabiesService.getAllBabies(req.app.get('db'))
             .then(babies => {
@@ -20,7 +19,6 @@ babiesRouter
         const { baby_name, age, country, about, image_url, total_score, total_votes } = req.body
         const newBaby = { baby_name, age, country, about, image_url, total_score, total_votes }
         newBaby.parent_id = req.user.id
-        console.log('inside babies.router.post | line 21 | req.body', newBaby);
 
         for (const [key, value] of Object.entries(newBaby))
             if (value == null)
@@ -36,9 +34,7 @@ babiesRouter
             res
                 .status(201)
                 .location(path.posix.join(req.originalUrl, `/${baby.parent_id}`))
-                .json(BabiesService.serializeBaby(baby))
-                console.log('inside babies-router postBaby response:', res.body);
-                
+                .json(BabiesService.serializeBaby(baby))                
         })
         .catch(next)
     })
@@ -48,11 +44,9 @@ babiesRouter
     .all(requireAuth)
     .all(checkBabyExists)
     .get(requireAuth, (req, res) => {
-        console.log('babies-router | line 48 | req:', req);
         res.json(BabiesService.serializeBaby(res.baby))
     })
     .patch(requireAuth, jsonParser, (req, res, next) => {
-        console.log('inside babies.router.PATCH | line 54 | req.body:', req.body);
         const { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id } = req.body
         const babyToUpdate = { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id }
         
@@ -63,8 +57,6 @@ babiesRouter
                     message: `Request body must contain id, baby_name, about, image_url, total_score, total_votes, or parent_id`
                 }
             })
-
-        console.log('inside babiesRouter.PATCH | line 63 | req.params:', req.params );
         
         BabiesService.updateBaby(
             req.app.get('db'),
@@ -82,7 +74,6 @@ babiesRouter
     .all(requireAuth)
     .all(checkBabiesExists)
     .get(requireAuth, (req, res) => {
-        console.log('babies-router | line 85 | req.user:', req.user);
         res.json(BabiesService.serializeBabies(res.babies))
     })
 

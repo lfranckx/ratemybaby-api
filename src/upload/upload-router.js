@@ -7,7 +7,6 @@ const multipleUpload = require('./upload-multiple-service')
 
 uploadRouter
     .post('/', requireAuth, (req, res) => { upload(req, res, (error) => {
-        console.log('inside uploadRouter.POST req.file:', req.file);
         if(error) {
             return res.status(400).json({ error: error })
         } 
@@ -26,13 +25,10 @@ uploadRouter
 
 uploadRouter
     .post('/multiple', requireAuth, (req, res) => {multipleUpload(req, res, (error) => {
-        console.log('files:', req.files);
         if ( error ) {
-            console.log( 'errors', error )
             res.json( { error: error } )
         }
         if (req.files === undefined) {
-            console.log('Error: No file selected')
             res.json({ error: 'No file selected' })
         }
         const files = req.files
