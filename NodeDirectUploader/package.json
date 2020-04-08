@@ -1,0 +1,11 @@
+{
+  "name": "nodedirectuploader",
+  "version": "1.0.0",
+  "description": "ratemybaby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bowie",
+  "license": "ISC"
+}
