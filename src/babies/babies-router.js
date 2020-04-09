@@ -68,6 +68,17 @@ babiesRouter
         })
         .catch(next)
     })
+    .delete(requireAuth, jsonParser, (req, res, next) => {
+        console.log(req.params)
+        BabiesService.deleteBaby(
+            req.app.get('db'),
+            req.params.id
+        )
+        .then(numRowsAffected => {
+            res.status(204).end()
+        })
+       
+    })
 
 babiesRouter
     .route('/parent/id')

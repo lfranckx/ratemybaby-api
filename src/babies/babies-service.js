@@ -32,6 +32,16 @@ const BabiesService = {
             .returning('*')
             .then(([baby]) => baby)
     },
+    updateBaby(knex, id, newBabyFields) {
+        return knex('user_babies')
+            .where({ id })
+            .update(newBabyFields)
+    },
+    deleteBaby(knex, id) {
+        return knex('user_babies')
+        .where ({ id })
+        .delete()
+    },
     serializeBabies(babies) {
         return babies.map(this.serializeBaby)
     },
@@ -50,11 +60,6 @@ const BabiesService = {
             total_votes: Number(babyData.total_votes),
             parent_id: babyData.parent_id,
         }
-    },
-    updateBaby(knex, id, newBabyFields) {
-        return knex('user_babies')
-            .where({ id })
-            .update(newBabyFields)
     }
 }
 
