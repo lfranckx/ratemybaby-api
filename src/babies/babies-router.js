@@ -8,7 +8,7 @@ const babiesRouter = express.Router()
 
 babiesRouter
     .route('/')
-    .get((req, res, next) => {
+    .get(requireAuth, (req, res, next) => {
         BabiesService.getAllBabies(req.app.get('db'))
             .then(babies => {
                 res.json(BabiesService.serializeBabies(babies))
