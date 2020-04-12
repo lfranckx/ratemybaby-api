@@ -18,11 +18,12 @@ VALUES
     ('user9', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user9@gmail.com'),
     ('user10', '$2a$10$yivuED9JkAt3vWs4NYmIbuCZPq86Oylh8NaiX4FqLoFXVfq9kBENe', 'user10@gmail.com');
 
-INSERT INTO user_babies (baby_name, age, country, about, image_url, total_score, total_votes, parent_id)
+INSERT INTO user_babies (baby_name, age, age_format, country, about, image_url, total_score, total_votes, parent_id)
 VALUES
     (
         'Noah', 
-        '2 years',
+        8,
+        'months',
         'Indonesia',
         'I, myself, am strange and unusual.',        
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Noah.jpg',
@@ -32,7 +33,8 @@ VALUES
     ),
     (
         'Emma', 
-        '1 year',
+        1,
+        'year',
         'UK',
         'Half crazy, half sane.
         A bit of a gypsy.
@@ -44,7 +46,8 @@ VALUES
     ),
     (
         'Frank', 
-        '6 months',
+        3,
+        'months',
         'United States',
         'Do not look at me.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Frank.jpg',
@@ -54,7 +57,8 @@ VALUES
     ),
     (
         'James', 
-        '3 months',
+        5,
+        'months',
         'United States',
         'Match my hustle. Iron sharpens Iron.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/CJ.jpg',
@@ -63,8 +67,9 @@ VALUES
         4
     ),
     (
-        'Kylie', 
-        '1 year',
+        'Kylie',
+        1,
+        'year',
         'United States',
         'Chill, music lover, positive, inspiring, kind.✨',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Kylie.jpg',
@@ -73,8 +78,9 @@ VALUES
         5
     ),
     (
-        'Stephen', 
-        '3 months',
+        'Stephen',
+        3, 
+        'months',
         'China',
         'Fun facts 🎉
         🌮 Food lover
@@ -86,7 +92,8 @@ VALUES
     ),
     (
         'Lauren', 
-        '4 months',
+        4,
+        'months',
         'United States',
         'Damn I’m tired 😴',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Lauren.jpg',
@@ -96,7 +103,8 @@ VALUES
     ),
     (
         'Dan',
-        '6 months',
+        6,
+        'months',
         'United States', 
         'I like to Netflix before chill.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Dan.jpg',
@@ -105,8 +113,9 @@ VALUES
         8
     ),
     (
-        'John', 
-        '11 months',
+        'John',
+        11, 
+        'months',
         'United States',
         'Small awkward creature who can often be found dancing.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/John.jpg',
@@ -116,7 +125,8 @@ VALUES
     ),
     (
         'Danielle', 
-        '8 months',
+        8,
+        'months',
         'United States',
         'I love pugs, bugs, and Disney. I am a Disney princess 👸🏻 but basically Satan.',
         'https://ratemybaby-images.s3-us-west-1.amazonaws.com/Danielle.jpg',

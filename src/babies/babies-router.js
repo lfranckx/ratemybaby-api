@@ -16,8 +16,8 @@ babiesRouter
             .catch(next)
     })
     .post(requireAuth, jsonParser, (req, res, next) => {
-        const { baby_name, age, country, about, image_url, total_score, total_votes } = req.body
-        const newBaby = { baby_name, age, country, about, image_url, total_score, total_votes }
+        const { baby_name, age, age_format, country, about, image_url, total_score, total_votes } = req.body
+        const newBaby = { baby_name, age, age_format, country, about, image_url, total_score, total_votes }
         newBaby.parent_id = req.user.id
 
         for (const [key, value] of Object.entries(newBaby))
@@ -47,14 +47,14 @@ babiesRouter
         res.json(BabiesService.serializeBaby(res.baby))
     })
     .patch(requireAuth, jsonParser, (req, res, next) => {
-        const { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id } = req.body
-        const babyToUpdate = { id, baby_name, age, country, about, image_url, total_score, total_votes, parent_id }
+        const { id, baby_name, age, age_format, country, about, image_url, total_score, total_votes, parent_id } = req.body
+        const babyToUpdate = { id, baby_name, age, age_format, country, about, image_url, total_score, total_votes, parent_id }
         
         const numberOfValues = Object.values(babyToUpdate).filter(Boolean).length
         if (numberOfValues === 0)
             return res.status(400).json({
                 error: {
-                    message: `Request body must contain id, baby_name, about, image_url, total_score, total_votes, or parent_id`
+                    message: `Request body must contain id, baby_name, age, age_format, country, about, image_url, total_score, total_votes, or parent_id`
                 }
             })
         

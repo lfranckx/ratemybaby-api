@@ -34,9 +34,9 @@ Response Body:
 
 BABIES ENDPOINT - GET by parent id
 https://warm-anchorage-60574.herokuapp.com/api/babies/parent/id
-Method: 'GET'
+Method: "GET"
 Headers: {
-    'authorization': 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1ODY2MzQ0MDUsImV4cCI6MTU4NjY0NTIwNSwic3ViIjoidXNlcjEifQ.7T7SGUcCSthyKBARYSJU2w4u_usYWMuzdhjEYDcpPXM'
+    "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1ODY2MzQ0MDUsImV4cCI6MTU4NjY0NTIwNSwic3ViIjoidXNlcjEifQ.7T7SGUcCSthyKBARYSJU2w4u_usYWMuzdhjEYDcpPXM"
 }
 Response Body:
 [
@@ -66,13 +66,13 @@ Response Body:
 
 UPLOAD ENDPOINT:
 https://warm-anchorage-60574.herokuapp.com/api/upload
-Method: 'POST'
+Method: "POST"
 Headers: {
-    'Content-Type': 'application/json'
-    'authorization': 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1ODY2MzQ0MDUsImV4cCI6MTU4NjY0NTIwNSwic3ViIjoidXNlcjEifQ.7T7SGUcCSthyKBARYSJU2w4u_usYWMuzdhjEYDcpPXM'
+    "Content-Type": "application/json"
+    "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1ODY2MzQ0MDUsImV4cCI6MTU4NjY0NTIwNSwic3ViIjoidXNlcjEifQ.7T7SGUcCSthyKBARYSJU2w4u_usYWMuzdhjEYDcpPXM"
 }
 Request Body: {
-    'image': 'superlike.png'
+    "image": "superlike.png"
 }
 Response Body:
 {
@@ -82,17 +82,21 @@ Response Body:
 
 USERS ENDPOINT:
 https://warm-anchorage-60574.herokuapp.com/api/users
-Method: 'POST'
+Method: "POST"
 Headers: {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json"
 }
 Body: {
-    'username': 'TestUser',
-    'user_password': 'Test1234!',
-    'email': 'testemail@gmail.com'
+    "username": "TestUser",
+    "user_password": "Test1234!",
+    "email": "testemail@gmail.com"
 }
 Response Body: {
-    
+    "id": 14,
+    "username": "TestUser",
+    "user_password": "$2a$12$vmLS3PwtA2nNRGPQoDWzUeGuHZkiPLDcf1JRKoIhD2ObIDHiIQO5e",
+    "email": "testemail@gmail.com",
+    "date_created": "2020-04-12T04:01:32.911Z"
 }
 
 ============================================================

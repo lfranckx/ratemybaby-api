@@ -53,6 +53,7 @@ const BabiesService = {
             id: babyData.id,
             baby_name: xss(babyData.baby_name),
             age: xss(babyData.age),
+            age_format: xss(babyData.age_format),
             country: xss(babyData.country),
             about: xss(babyData.about),
             image_url: xss(babyData.image_url),
