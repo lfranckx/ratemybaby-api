@@ -24,21 +24,28 @@ users: Endpoint for storing and accessing all of the data for each user.  It che
 ENDPOINT DOCUMENTATION:
 
 AUTH ENDPOINT:
+
 https://warm-anchorage-60574.herokuapp.com/api/auth/login
+
 Method: 'POST'
+
 Request Body:
 {
 	"username": "user1",
 	"user_password": "User1234!"
 }
+
 Response Body:
 {
     "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1ODY2MzQ0MDUsImV4cCI6MTU4NjY0NTIwNSwic3ViIjoidXNlcjEifQ.7T7SGUcCSthyKBARYSJU2w4u_usYWMuzdhjEYDcpPXM"
 }
 
 BABIES ENDPOINT - GET by parent id
+
 https://warm-anchorage-60574.herokuapp.com/api/babies/parent/id
+
 Method: "GET"
+
 Headers: {
     "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1ODY2MzQ0MDUsImV4cCI6MTU4NjY0NTIwNSwic3ViIjoidXNlcjEifQ.7T7SGUcCSthyKBARYSJU2w4u_usYWMuzdhjEYDcpPXM"
 }
@@ -70,11 +77,14 @@ Response Body:
 
 UPLOAD ENDPOINT:
 https://warm-anchorage-60574.herokuapp.com/api/upload
+
 Method: "POST"
+
 Headers: {
     "Content-Type": "application/json"
     "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1ODY2MzQ0MDUsImV4cCI6MTU4NjY0NTIwNSwic3ViIjoidXNlcjEifQ.7T7SGUcCSthyKBARYSJU2w4u_usYWMuzdhjEYDcpPXM"
 }
+
 Request Body: {
     "image": "superlike.png"
 }
@@ -86,10 +96,13 @@ Response Body:
 
 USERS ENDPOINT:
 https://warm-anchorage-60574.herokuapp.com/api/users
+
 Method: "POST"
+
 Headers: {
     "Content-Type": "application/json"
 }
+
 Body: {
     "username": "TestUser",
     "user_password": "Test1234!",
