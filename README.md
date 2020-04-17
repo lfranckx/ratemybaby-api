@@ -7,6 +7,7 @@ DEMO USER:
     Password: Demo1234!
 
 ============================================================
+
 API ENDPOINT SERVICES:
 
 auth: Creates the JSON Web Token to store in the browser, which allows the app to access that user's information and keep them logged in.
@@ -19,6 +20,7 @@ The endpoint checks the file type ensuring that it is a JPEG, JPG, PNG, or GIF o
 users: Endpoint for storing and accessing all of the data for each user.  It checks the database for current usernames existing in the database ensuring no duplicate usernames are made. It validates that passwords meet certain parameters such as length and special characters and hashes them using bcryptjs.    
 
 ============================================================
+
 ENDPOINT DOCUMENTATION:
 
 AUTH ENDPOINT:
@@ -102,6 +104,7 @@ Response Body: {
 }
 
 ============================================================
+
 SUMMARY:
 This API allows users to login and create new profiles to sign into.  It uses JWT validation to log users in and access their information from the database using the token.  It communicates with Amazon Web Services S3 Buckets for uploading files and receiving their image url.
 
