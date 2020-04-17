@@ -1,5 +1,7 @@
 NAME OF APP: Toddler
-LINK TO LIVE APP: https://toddler.now.sh/
+
+LINK TO LIVE APP: https://toddler-app.now.sh/
+
 DEMO USER: 
     Username: Demo 
     Password: Demo1234!
