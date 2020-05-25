@@ -149,21 +149,19 @@ Response Body: <br>
 <br>    "date_created": "2020-04-12T04:01:32.911Z"<br>
 }
 
-============================================================
-
-SUMMARY:
+## SUMMARY:
 This API allows users to login and create new profiles to sign into.  It uses JWT validation to log users in and access their information from the database using the token.  It communicates with Amazon Web Services S3 Buckets for uploading files and receiving their image url.
 
-TECHNOLOGIES USED:
-AWS-SDK
-Bcryptjs
-CORS
-Express
-JWT
-Knex
-Multer-S3
-Treeize
-Winston
+## TECHNOLOGIES USED:
+* AWS-SDK
+* Bcryptjs
+* CORS
+* Express
+* JWT
+* Knex
+* Multer-S3
+* Treeize
+* Winston
 
 <img width="785" alt="Screen Shot 2020-04-10 at 12 47 40 PM" src="https://user-images.githubusercontent.com/52330544/79020062-ad084800-7b2c-11ea-81b1-f44318351a6c.png">
 <img width="822" alt="Screen Shot 2020-04-10 at 12 49 05 PM" src="https://user-images.githubusercontent.com/52330544/79020076-b5608300-7b2c-11ea-9be6-eee723b14223.png">
