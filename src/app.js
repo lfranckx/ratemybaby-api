@@ -12,22 +12,22 @@ const morganOption = (NODE_ENV === 'production')
 
 const errorHandler = require('./errorHandler')
 const authRouter = require('./auth/auth-router')
-const uploadeRouter = require('./upload/upload-router')
+const uploadRouter = require('./upload/upload-router')
 const usersRouter = require('./users/users-router')
 const babiesRouter = require('./babies/babies-router')
-
-app.get('/', (req, res) => {
-  res.send('Hello, boilerplate!')
-})
 
 app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors())
 
-app.use('/api/babies', babiesRouter)
+app.get('/', (req, res) => {
+  res.send('Hello, boilerplate!')
+})
+
 app.use('/api/auth', authRouter)
+app.use('/api/babies', babiesRouter)
 app.use('/api/users', usersRouter)
-app.use('/api/upload', uploadeRouter)
+app.use('/api/upload', uploadRouter)
 
 app.use(errorHandler)
 
